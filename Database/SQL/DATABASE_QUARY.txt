@@ -1,0 +1,122 @@
+
+CREATE a TABLE
+-----------------
+---> Table 1 order_t
+create table customer_t(    
+customer_id         int not null, 
+customer_name       varchar(30) not null,
+customer_address    varchar(30) not null,
+city            varchar(30) not null,
+state           varchar(30) not null,
+
+postal_code     varchar(30) not null,
+primary key(customer_id)
+);
+
+---> Table 2 order_t
+-----------------
+create table order_t ( order_id int not null,
+	order_date date not null,
+	customer_id int not null,
+	primary key( order_id)
+);
+
+
+---> Table 3 Customer_temp 
+-----------------
+create table Customer_temp  (
+	customer_name varchar(100) not null,
+	city  varchar(100) not null	
+);
+
+
+DROP PRIMARY KEY
+-----------------
+alter table customer_t drop primary key;
+
+SET New Primary KEY
+--------------------
+alter table customer_t add primary key(customer_id);
+
+SET Foreign KEY
+--------------------
+alter table order_t add foreign key(customer_id) references customer_t(customer_id);
+
+DROP a Foreign KEY
+------------------
+alter table order_t drop foreign key order_t_ibfk_1;
+
+
+
+Add colum at the End of the Table
+----------------------------------
+ alter table customer_t  add column date_of_birth date;
+
+ 
+ Add colum after a Existing Column
+----------------------------------
+alter table customer_t add column country varchar(30)  after postal_code
+
+How to Delete a Column from a Existing Table
+--------------------------------------------
+alter table customer_t drop column date_of_birth;
+
+Rename Existing Column
+---------------------
+alter table customer_t modify column customer_address varchar(100) not null; 
+
+Add Data into Table according to Table sequence
+-----------------------------------------------
+insert into CUSTOMER_T 
+values (1, 'Kamal', '400, Dhaka', 'Ramna', 'Dhaka', 1000,'Bangladesh');
+
+
+Add Data into Table according to column
+-----------------------------------------------
+insert into CUSTOMER_T (customer_id, customer_name, customer_address, city, state, postal_code, country) 
+values (2, 'Arin', '400, Dhaka', 'Ramna', 'Dhaka', 1000,'Bangladesh');
+
+
+insert into CUSTOMER_T (customer_id, customer_address, state, city, postal_code, country,customer_name) 
+values (3, '400, Dhaka', 'Dhaka', 'Ramna', 1000,'Bangladesh','Mamun');
+
+Multiple Data Inser into Table
+-------------------------------
+insert into customer_t (customer_id, customer_name, customer_address, city, state, postal_code, country)
+VALUES (4, 'Rahim', '400, Dhaka', 'Ramna', 'Dhaka', 1000,'Bangladesh'),
+(5, 'Major', '400, Dhaka', 'Ramna', 'Dhaka', 1000,'Bangladesh'),
+(6, 'Kornel', '400, Dhaka', 'Ramna', 'Dhaka', 1000,'Bangladesh');
+
+
+Exchange Data Between Tables
+----------------------------
+insert into Customer_temp select customer_name, city from Customer_t
+
+
+Update Row value 
+--------------
+update customer_t set customer_address = '400 Easkaton, Dhaka';
+
+Update Row value to a Particular Row
+update customer_t set customer_address = '400 Easkaton, Dhaka' WHERE customer_id=3;
+
+update customer_t set customer_address = '500 Easkaton, Dhaka' WHERE customer_name='Arin';
+
+update customer_t set customer_address = '530 Easkaton, Dhaka' WHERE (customer_id=8 AND customer_name='Arin');
+
+
+Delete Table data from a Table
+-------------------------------
+delete from customer_temp;
+
+
+Delete a Define Row from a Table
+-------------------------------------
+delete from Customer_T where customer_id = 1;
+
+Delete Data from Two Tables
+-------------------------
+delete customer_t, order_t from customer_t, order_t where customer_t.customer_id = order_t.customer_id;
+
+
+
