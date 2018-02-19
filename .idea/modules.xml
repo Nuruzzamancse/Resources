@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../Address Book 2/.idea/Address Book 2.iml" filepath="$PROJECT_DIR$/../Address Book 2/.idea/Address Book 2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Online Adrees Book/Address-Book/.idea/Address Book 2.iml" filepath="$PROJECT_DIR$/../Online Adrees Book/Address-Book/.idea/Address Book 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Address_Book_3/.idea/Address_Book_3.iml" filepath="$PROJECT_DIR$/../Address_Book_3/.idea/Address_Book_3.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Address_Book_Practice/.idea/Address_Book_Practice.iml" filepath="$PROJECT_DIR$/../Address_Book_Practice/.idea/Address_Book_Practice.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Database_Resource.iml" filepath="$PROJECT_DIR$/.idea/Database_Resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../LogInPage/.idea/LogInPage.iml" filepath="$PROJECT_DIR$/../LogInPage/.idea/LogInPage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Online Adrees Book/.idea/Online Adrees Book.iml" filepath="$PROJECT_DIR$/../Online Adrees Book/.idea/Online Adrees Book.iml" />
     </modules>
   </component>
 </project>
