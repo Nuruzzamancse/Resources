@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--@import "mystyle.css";-->
+    <!--<link type = "text/css" href = "mystyle.css" media = " all" />-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+
+
+    <style type = "text/css" media = "all">
+        h1 {
+            color: #36C;
+            font-weight: normal;
+            letter-spacing: .4em;
+            margin-bottom: 1em;
+            text-transform: lowercase;
+        }
+
+        #black h2 {
+            color: green;
+        }
+
+        body > p {
+            color: blue;
+        }
+
+        /*css3 start*/
+
+        #rcorners1 {
+            border-radius: 25px;
+            background: #8AC007;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+        #rcorners2 {
+            border-radius: 25px;
+            border: 2px solid #8AC007;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+        #rcorners3 {
+            border-radius: 25px;
+            background: url(download.jpeg);
+            background-position: left top;
+            background-repeat: repeat;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+        }
+
+        #rcorners4 {
+            border-radius: 15px 50px;
+            background: #a44170;
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+        }
+
+        #borderimg1 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(download.jpeg);
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 10px;
+        }
+        #borderimg2 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(download.jpeg);
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 20px;
+        }
+        #borderimg3 {
+            border: 10px solid transparent;
+            padding: 15px;
+            border-image-source: url(download.jpeg);
+            border-image-repeat: round;
+            border-image-slice: 30;
+            border-image-width: 30px;
+        }
+
+        #multibackground {
+            background-image: url(img2.jpg), url(download.jpeg);
+            background-position: left top, left top;
+            background-repeat: no-repeat, repeat;
+            padding: 75px;
+        }
+
+        #multibackground2 {
+            background: url(img2.jpg) left top no-repeat, url(download.jpeg) right bottom no-repeat, url(img3.jpg) left top repeat;
+            background-size: 50px, 50px, auto;
+        }
+
+        #p1 {background-color:rgba(255,0,0,0.3);}
+        #p2 {background-color:rgba(0,255,0,0.3);}
+        #p3 {background-color:rgba(0,0,255,0.3);}
+
+        #g1 {background-color:hsl(120, 100%, 50%);}
+        #g2 {background-color:hsl(120,100%,75%);}
+        #g3 {background-color:hsl(120,100%,25%);}
+
+        #grad1 {
+            height: 100px;
+            background: -webkit-linear-gradient(pink,green);
+            background: -o-linear-gradient(pink,green);
+            background: -moz-linear-gradient(pink,green);
+            background: linear-gradient(pink,green);
+        }
+
+        #grad2 {
+            height: 100px;
+            background: -webkit-linear-gradient(left, red , blue);
+            background: -o-linear-gradient(right, red, blue);
+            background: -moz-linear-gradient(right, red, blue);
+            background: linear-gradient(to right, red , blue);
+        }
+
+        #grad3 {
+            height: 100px;
+            background: -webkit-linear-gradient(left top, red , blue);
+            background: -o-linear-gradient(bottom right, red, blue);
+            background: -moz-linear-gradient(bottom right, red, blue);
+            background: linear-gradient(to bottom right, red , blue);
+        }
+
+        #grad4 {
+            height: 100px;
+            background: -webkit-linear-gradient(red, orange, yellow, red, blue, green,pink);
+            background: -o-linear-gradient(red, orange, yellow, red, blue, green,pink);
+            background: -moz-linear-gradient(red, orange, yellow, red, blue, green,pink);
+            background: linear-gradient(red, orange, yellow, red, blue, green,pink);
+        }
+
+        #grad5 {
+            height: 100px;
+            width: 550px;
+            background: -webkit-radial-gradient(red 5%, green 15%, pink 60%);
+            background: -o-radial-gradient(red 5%, green 15%, pink 60%);
+            background: -moz-radial-gradient(red 5%, green 15%, pink 60%);
+            background: radial-gradient(red 5%, green 15%, pink 60%);
+        }
+
+        #grad6 {
+            height: 100px;
+            width: 550px;
+            background: -webkit-repeating-radial-gradient(blue, yellow 10%, green 15%);
+            background: -o-repeating-radial-gradient(blue, yellow 10%, green 15%);
+            background: -moz-repeating-radial-gradient(blue, yellow 10%, green 15%);
+            background: repeating-radial-gradient(blue, yellow 10%, green 15%);
+        }
+
+        /*shadow*/
+
+        h1 {
+            text-shadow: 2px 2px;
+        }
+        h2 {
+            text-shadow: 2px 2px red;
+        }
+        h3 {
+            text-shadow: 2px 2px 5px red;
+        }
+        h4 {
+            color: white;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        h5 {
+            text-shadow: 0 0 3px #FF0000;
+        }
+        h6 {
+            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+        }
+        /*p {*/
+            /*color: white;*/
+            /*text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;*/
+        /*}*/
+
+        #box{
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: red;
+            box-shadow: 10px 10px;
+        }
+
+        #box1{
+            width: 300px;
+            height: 100px;
+            padding: 15px;
+            background-color: red;
+            box-shadow: 10px 10px rgba(0,255,0,75%);
+
+        }
+
+        p.text1 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        p.text2 {
+            white-space: nowrap;
+            width: 200px;
+            border: 1px solid #000000;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        p.text3 {
+            width: 140px;
+            border: 1px solid #000000;
+            word-break: keep-all;
+        }
+        p.text4 {
+            width: 140px;
+            border: 1px solid #000000;
+            word-break: break-all;
+        }
+
+
+        /*div {*/
+            /*width: 300px;*/
+            /*height: 100px;*/
+            /*background-color: pink;*/
+            /*border: 1px solid black;*/
+        /*}*/
+        div#myDiv {
+            /* IE 9 */
+            -ms-transform: rotate(-20deg);
+
+            /* Safari */
+            -webkit-transform: rotate(-20deg);
+
+            /* Standard syntax */
+            transform: rotate(-20deg);
+        }
+
+        div#myDiv2 {
+            -webkit-transform: rotateX(120deg);
+
+            /* Safari */
+            transform: rotateX(160deg);
+
+            /* Standard syntax */
+        }
+
+        div#zDiv {
+            -webkit-transform: rotateZ(90deg);
+
+            /* Safari */
+            transform: rotateZ(70deg);
+
+            /* Standard syntax */
+        }
+
+        div#yDiv {
+            -webkit-transform: rotateY(150deg);
+
+            /* Safari */
+            transform: rotateY(160deg);
+
+            /* Standard syntax */
+        }
+
+
+        @keyframes animation {
+            from {background-color: pink;}
+            to {background-color: green;}
+        }
+        /*div {*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: red;*/
+            /*animation-name: animation;*/
+            /*animation-duration: 5s;*/
+        /*}*/
+
+        p{
+
+
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: red;*/
+            animation-name: animation;
+            animation-duration: 5s;
+
+        }
+
+        @keyframes animation2 {
+            from { background-color: black}
+            50% {
+                font-size:300%;
+                margin-left:25%;
+                width:150%;
+            }
+        to { background-color: blue}
+        }
+
+        #myDivAnim{
+            animation-name: animation2;
+            animation-duration: 5s;
+        }
+
+
+        h1 {
+            -moz-animation-duration: 3s;
+            -webkit-animation-duration: 3s;
+            -moz-animation-name: slidein;
+            -webkit-animation-name: slidein;
+        }
+        @-moz-keyframes slidein {
+            from {
+                margin-left:100%;
+                width:300%
+            }
+            to {
+                margin-left:0%;
+                width:100%;
+            }
+        }
+        @-webkit-keyframes slidein {
+            from {
+                margin-left:100%;
+                width:300%
+            }
+            to {
+                margin-left:0%;
+                width:100%;
+            }
+        }
+
+
+        .multi {
+            /* Column count property */
+            -webkit-column-count: 4;
+            -moz-column-count: 4;
+            column-count: 4;
+
+            /* Column gap property */
+            -webkit-column-gap: 40px;
+            -moz-column-gap: 40px;
+            column-gap: 40px;
+
+            /* Column style property */
+            /*Out this portion if don't want vertical line'*/
+            -webkit-column-rule-style: solid;
+            -moz-column-rule-style: solid;
+            column-rule-style: solid;
+        }
+
+        #divOutlone
+        {
+            margin: 20px;
+            padding: 10px;
+            width: 300px;
+            height: 100px;
+            border: 5px solid pink;
+            outline: 5px solid green;
+            outline-offset: 15px;
+        }
+
+        .div1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+        }
+        .div2 {
+            width: 300px;
+            height: 100px;
+            padding: 50px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        body {
+            /*background-color: lightpink;*/
+        }
+        @media screen and (max-width: 420px) {
+            body {
+                background-color: lightblue;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<h1 id="black">Hello Dhaka!</h1>
+
+<div id="black">
+    <h1>My Own Site</h1>
+    <h2>My Own Site</h2>
+    <h2 >Hello Mr.</h2>
+
+</div>
+
+
+
+<p class="center bold">
+    This para will be styled by the classes center and bold.
+</p>
+
+<div>
+    <p style="background:url(img3.jpg) repeat fixed;">This is another paragraph.</p>
+</div>
+
+<p style="font-family:georgia,garamond,serif;">
+    This text is rendered in either georgia, garamond, or the default serif font
+    depending on which font  you have at your system.
+</p>
+
+<p style="font-style:italic;">
+    This text will be rendered in italic style
+</p>
+
+<p style="font-stretch:ultra-expanded;">
+    If this doesn't appear to work, it is likely that your computer doesn't have a
+    condensed or expanded version of the font being used.
+</p>
+
+<p style="font:italic small-caps bold 15px georgia;" id="p1">
+    Applying all the properties on the text at once.
+</p>
+
+<!--css3 start in the below HTML-->
+
+<p id="rcorners1">Rounded corners!</p>
+<p id="rcorners2">Rounded corners!</p>
+<p id="rcorners3">Rounded corners!</p>
+<p id="rcorners4">Rounded corners!</p>
+
+<p id="borderimg1">This is image boarder example.</p>
+<p id="borderimg2">This is image boarder example.</p>
+<p id="borderimg3">This is image boarder example.</p>
+
+<div id="multibackground">
+    <h1>www.tutorialspoint.com</h1>
+    <p>Tutorials Point originated from the idea that there exists a class of  readers who respond better to online content and prefer to learn new skills at
+        their own pace from the comforts of their drawing rooms. The journey commenced with a single tutorial on HTML in  2006 and elated by the response it generated,
+        we worked our way to adding fresh tutorials to our repository which now proudly flaunts a wealth of tutorials and allied articles on
+        topics ranging from programming languages to web designing to academics and much more..</p>
+</div>
+
+<hr>
+
+<div id="multibackground2">
+    <h1>www.tutorialspoint.com</h1>
+    <p>Tutorials Point originated from the idea that there exists a class of  readers who respond better to online content and prefer to learn new skills at
+        their own pace from the comforts of their drawing rooms. The journey commenced with a single tutorial on HTML in  2006 and elated by the response it generated,
+        we worked our way to adding fresh tutorials to our repository which now proudly flaunts a wealth of tutorials and allied articles on
+        topics ranging from programming languages to web designing to academics and much more..</p>
+</div>
+
+<p>HSL colors:</p>
+<p id="g1">Green</p>
+<p id="g2">Normal Green</p>
+<p id="g3">Dark Green</p>
+
+<div id="grad1">
+
+</div>
+<br>
+
+<div id="grad2">
+
+</div>
+
+<br>
+
+<div id="grad3">
+
+</div>
+
+<br>
+
+<div id="grad4">
+
+</div>
+
+<br>
+
+<div id="grad5">
+
+</div>
+
+<br>
+
+<div id="grad6">
+
+</div>
+
+<br>
+
+<h1>Tutorialspoint.com</h1>
+<h2>Tutorialspoint.com</h2>
+<h3>Tutorialspoint.com</h3>
+<h4>Tutorialspoint.com</h4>
+<h5>Tutorialspoint.com</h5>
+<h6>Tutorialspoint.com</h6>
+<p>Tutorialspoint.com</p>
+
+<br>
+
+<div id="box">
+
+</div>
+
+<br>
+
+<div id="box1">
+
+</div>
+
+<br>
+
+<b>Original Text:</b>
+
+<p>Tutorials Point originated from the idea that there exists a class of
+    readers who respond better to online content and prefer to learn new skills at
+    their own pace from the comforts of their drawing rooms.</p>
+
+<b>Text overflow:clip:</b>
+
+<p class="text1">Tutorials Point originated from the idea that there exists
+    a class of readers who respond better to online content and prefer to learn
+    new skills at their own pace from the comforts of their drawing rooms.</p>
+
+<b>Text overflow:ellipsis</b>
+
+<p class="text2">Tutorials Point originated from the idea that there exists
+    a class of readers who respond better to online content and prefer to learn
+    new skills at their own pace from the comforts of their drawing rooms.</p>
+
+
+<b>line break at hyphens:</b>
+<p class="text3">Tutorials Point originated from the idea that there exists a class of
+    readers who respond better to online content and prefer to learn new skills at
+    their own pace from the comforts of their drawing rooms.</p>
+
+<b>line break at any character</b>
+
+<p class="text4">Tutorials Point originated from the idea that there exists a class of
+    readers who respond better to online content and prefer to learn new skills at their
+    own pace from the comforts of their drawing rooms.</p>
+
+
+<br>
+
+<div style="background-color: green; height: 200px; width: 400px">
+    Tutorials point.com.
+</div>
+
+<div id="myDiv" style="background-color: green; height: 200px; width: 400px">
+    Tutorials point.com
+</div>
+
+<br>
+<div id="myDiv2" style="background-color: green; height: 200px; width: 400px">
+    Tutorials point.com
+</div>
+
+<br>
+<div id="zDiv" style="background-color: green; height: 200px; width: 400px">
+    Tutorials point.com
+</div>
+
+<br>
+<div id="yDiv" style="background-color: green; height: 200px; width: 400px">
+    Tutorials point.com
+</div>
+
+
+
+
+<div id="myDivAnim" style="background-color: green; height: 200px; width: 400px">
+    Tutorials point.com
+</div>
+
+<div class="multi">
+    Tutorials Point originated from the idea that there exists a class of readers who respond
+    better to online content and prefer to learn new skills at their own pace from the comforts
+    of their drawing rooms. The journey commenced with a single tutorial on HTML in 2006 and
+    elated by the response it generated, we worked our way to adding fresh tutorials to our
+    repository which now proudly flaunts a wealth of tutorials and allied articles on topics
+    ranging from programming languages to web designing to academics and much more.
+</div>
+
+<button onclick="myFunction()">Reload page</button>
+<script>
+    function myFunction() {
+        location.reload();
+    }
+
+    </script>
+
+<div id="divOutlone">
+
+</div>
+<br>
+
+<div class="div1">TutorialsPoint.com</div></br>
+<div class="div2">TutorialsPoint.com</div>
+
+
+<div class="container">
+
+    <div class="jumbotron">
+        <h1>Tutorials point</h1>
+        <p>Tutorials Point originated from the idea that there exists a class of readers who respond better to online content and prefer to learn new skills at their own pace from the comforts of their drawing rooms.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Android</h2>
+            <p>Android is an open source and Linux-based operating system for mobile devices such as smartphones and tablet computers. Android was developed by the Open Handset Alliance, led by Google, and other companies.</p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>CSS</h2>
+            <p>Cascading Style Sheets, fondly referred to as CSS, is a simple design language intended to simplify the process of making web pages presentable.</p>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Java</h2>
+            <p>Java is a high-level programming language originally developed by Sun Microsystems and released in 1995. Java runs on a variety of platforms, such as Windows, Mac OS, and the various versions of UNIX. This tutorial gives a complete understanding of Java.</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
